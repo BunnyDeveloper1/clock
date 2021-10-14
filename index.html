@@ -1,0 +1,68 @@
+<html>
+	<head>
+		<title>Clock</title>
+		<meta charset=utf-8">
+		<meta name="viewport" content='width=device-width initial-scale=1'>
+		<style>
+			body{
+				margin:0;
+			}
+			#outer{
+				width:100%;
+				min-height:753px;
+				background-color: blue;
+			}
+			#clock{
+				position:fixed;
+				width:400px;
+				height:400px;
+				background-color: yellow;
+				margin-top:176px;
+				margin-left:550px;
+				border-radius:200px;
+
+			}
+			#small_pin{
+				width:10px;
+				height:150px;
+				background-color:black;
+				margin-left:190px;
+				margin-top:50px;
+				transform: rotate(0deg);
+				transform-origin: center bottom;
+				animation: 10s infinite move_s;
+
+			}
+			#big_pin{
+				width:150px;
+				height:10px;
+				background-color:black;
+				margin-left:190px;
+				margin-top:-10px;
+				transform: rotate(0deg);
+				transform-origin: center left;
+				animation: 100s infinite move_b;
+			}
+			@keyframes move_s{
+				from{transform: rotate(3.6deg); transform-origin: center bottom;}
+				to{transform: rotate(360.6deg); transform-origin: center bottom;}
+				}
+			@keyframes move_b{
+				from{transform: rotate(3.6deg); transform-origin: center left;}
+				to{transform: rotate(360.6deg); transform-origin: center left;}
+
+			
+				}
+		</style>
+	</head>
+	<body>
+		<div id="outer">
+			<div id="clock">
+			<div id="small_pin">
+			</div>
+			<div id="big_pin">
+			</div> 
+			</div>
+		</div>
+	</body>
+</html>
